@@ -1,0 +1,13 @@
+.menu{
+    display: flex;
+    background-color: aqua;
+    flex-direction: column;
+    height: 100vh;
+    width: 10%;
+}
+.titulo{
+    text-align: center;
+}
+.opcao{
+    padding-left: 30px;
+}
