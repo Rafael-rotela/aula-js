@@ -21,3 +21,28 @@ a{
 li{
     list-style: none;
 }
+button{
+    background: none;
+    border: none;
+}
+input{
+    background-color: var(--color-neutra);
+    color: var(--color-escuro);
+    font-size: large;
+    border: 1px solid var(--color-escuro);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.btn{
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white;              /* Cor do texto */
+    border: none;              /* Remove a borda */
+    padding: 10px 20px;         /* Espaçamento interno */
+    font-size: 16px;            /* Tamanho da fonte */
+    cursor: pointer;            /* Cursor de mão ao passar */
+    border-radius: 5px;  
+}
+.btn:hover {
+    background-color: #45a049; /* Cor de fundo no hover */
+}
