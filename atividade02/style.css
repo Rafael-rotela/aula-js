@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root{
-    --color-primary-1: #F2F0EF;
+    --color-primary-1: #1E293B;
     --color-primary-2: #BBBDBC;
     --color-primary-3: #245F73;
     --color-primary-4: #733E24;
+    --color-primary-5: #1B222B;
+    --color-primary-6: #79808A;
 
     --color-neutra: #fff;
     --color-escuro: #000;
@@ -11,38 +15,15 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Poppins';
 }
 body{
     display: flex;
+    height: 100vh;
 }
 a{
     text-decoration: none;
 }
 li{
     list-style: none;
-}
-button{
-    background: none;
-    border: none;
-}
-input{
-    background-color: var(--color-neutra);
-    color: var(--color-escuro);
-    font-size: large;
-    border: 1px solid var(--color-escuro);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-}
-.btn{
-    background-color: #4CAF50; /* Cor de fundo */
-    color: white;              /* Cor do texto */
-    border: none;              /* Remove a borda */
-    padding: 10px 20px;         /* Espaçamento interno */
-    font-size: 16px;            /* Tamanho da fonte */
-    cursor: pointer;            /* Cursor de mão ao passar */
-    border-radius: 5px;  
-}
-.btn:hover {
-    background-color: #45a049; /* Cor de fundo no hover */
 }
