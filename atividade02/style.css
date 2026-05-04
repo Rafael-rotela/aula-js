@@ -10,8 +10,26 @@
 
     --color-neutra: #fff;
     --color-escuro: #000;
-}
 
+    --text-color: #4E555F;
+}
+:root {
+  
+  --sidebar-bg: #1D232C;          
+  --sidebar-item-hover: #252C36;  
+  --dropdown-bg: #FFFFFF;         
+
+  /* Cores de Destaque */
+  --accent-gold: #FFC107;         
+  
+  /* Tipografia e Ícones */
+  --text-primary: #FFFFFF;        
+  --text-secondary: #8A929C;      
+  --text-dark: #333333;           
+  
+  /* Bordas e Divisores */
+  --divider-color: #2D353F;
+}
 *{
     padding: 0;
     margin: 0;

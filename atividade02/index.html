@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -16,67 +16,134 @@
 </head>
 
 <body>
-    <section class="barra-nav">
-        <div class="logo">
+    <nav class="menu">
+        <div class="header-menu">
             <i class="fa-brands fa-js"></i>
             <p>JavaScript</p>
         </div>
-        <div class="separacao"></div>
-        <nav class="navegacao" id="lista">
-            <ul class="lista-nav">
-                <li class="nav" data-id="0">
-                    <button class="data-nav" onclick="mostrarExercicio(0)">Atividade01</button>
-                </li>
-                <li class="nav" data-id="1">
-                    <button class="data-nav" onclick="mostrarExercicio(1)">Atividade01</button>
-                </li>
-                <li class="nav" data-id="2">
-                    <button class="data-nav" onclick="mostrarExercicio(2)">Atividade01</button>
-                </li>
-                <li class="nav" data-id="3">
-                    <button class="data-nav" onclick="mostrarExercicio(3)">Atividade01</button>
-                </li>
-                <li class="nav" data-id="4">
-                    <button class="data-nav" onclick="mostrarExercicio(4)">Atividade01</button>
-                </li>
-                <li class="nav" data-id="5">
-                    <button class="data-nav" onclick="mostrarExercicio(5)">Atividade01</button>
-                </li>
-                <li class="nav" data-id="6">
-                    <button class="data-nav" onclick="mostrarExercicio(6)">Atividade01</button>
-                </li>
-                <li class="nav" data-id="7">
-                    <button class="data-nav" onclick="mostrarExercicio(7)">Atividade01</button>
-                </li>
-                <li class="nav" data-id="8">
-                    <button class="data-nav" onclick="mostrarExercicio(8)">Atividade01</button>
-                </li>
-                <li class="nav" data-id="9">
-                    <button class="data-nav" onclick="mostrarExercicio(9)">Atividade01</button>
-                </li>
-            </ul>
-        </nav>
-        <div class="separacao"></div>
-    </section>
+       <ul class="lista-atividade">
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[1]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[2]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[3]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[4]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+        
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[5]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+        
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[6]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+        
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[7]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+        
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[8]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+        
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[9]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+        
+            <li class="itens-nav">
+                <button class="btn-nav" onclick="atividade[10]()">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Atividade</p>
+                </button>
+            </li>
+        </ul>
+    </nav>
     <main class="conteudo">
         <section class="atividades">
             <div class="titulo">
                 <p id="text"></p>
             </div>
             <div class="container">
-                <div class="container-atividade" id="atividade0">
+                <div class="atividade" id="atividade0">
                     <label for="idade">Digite sua idade</label>
-                    <input type="number" name="idade" id="idade">
-                    <button onclick="" class="btn">Enviar</button>
                     <p id="msg-idade"></p>
+                    <input type="number" name="idade" id="idade">
+                    <button onclick="calcularIdade()" class="btn">Enviar</button>
                 </div>
             </div>
             <div class="container">
-                <div class="container-atividade" id="atividade2">
-                    <input type="text" id="ex11_nome" placeholder="Digite seu nome" />
-                    <input type="number" id="ex11_idade" placeholder="Digite sua idade" />
-                    <button class="btn-executar" onclick="executar11()">Executar</button>
-                    <div class="resultado" id="res11"></div>
+                <div class="atividade" id="atividade2">
+                    <p id="ms-Mm"></p>
+                    <input type="text" id="maiorMenor" placeholder="Dígite o número" />
+                    <button class="btn-executar" onclick="negativoPositivo()">Enviar</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="atividade" id="atividade2">
+                    <p id="valor"></p>
+                    <p id="msg-valor"></p>
+                    <input type="text" id="saldo" placeholder="Dígite seu saldo" />
+                    <input type="text" id="debito" placeholder="Dígite quanto foi debitado" />
+                    <input type="text" id="credito" placeholder="Dígite quanto de crédito possuí" />
+                    <button class="btn-executar" onclick="saldo()">Enviar</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="atividade" id="atividade2">
+                    <p id="msg-genero"></p>
+                    <span>Digite seu genero</span>
+                    <input type="text" id="genero" placeholder="seu genero" />
+                    <button class="btn-executar" onclick="genero()">Enviar</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="atividade" id="atividade2">
+                    <p id="msg-sorteio"></p>
+                    <span>Digite os valores</span>
+                    <input type="number" id="valor1" placeholder="seu valor" required/>
+                    <input type="number" id="valor2" placeholder="seu valor" required/>
+                    <input type="number" id="valor3" placeholder="seu valor" required/>
+                    <button class="btn-executar" onclick="sorteio()">Enviar</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="atividade" id="atividade2">
+                    <p id="msg-genero"></p>
+                    <span>Digite seu genero</span>
+                    <input type="text" id="genero" placeholder="seu genero" />
+                    <button class="btn-executar" onclick="genero()">Enviar</button>
                 </div>
             </div>
         </section>

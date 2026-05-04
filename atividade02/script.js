@@ -40,4 +40,5 @@ function mostrarExercicio(numero) {
   document.getElementById(`atividade${numero}`).style.display = 'block';
  
 }
- 
+
+
