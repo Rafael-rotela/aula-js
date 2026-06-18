@@ -30,7 +30,6 @@ const btn = document.getElementById("btn");
 function validador(peso, altura) {
   const pesoValor = peso.value.trim();
   const alturaValor = altura.value.trim();
-
   if (!pesoValor || !alturaValor) {
     return false;
   } else {
@@ -47,10 +46,10 @@ btn.addEventListener("click", (evento) => {
   if (!resultado) {
     respostaNegativa.innerHTML = "Preencha todos os campos";
     respostaNegativa.classList.add("active");
-    respostaPositiva.classList.remove("active")
+    respostaPositiva.classList.remove("active");
   } else {
     respostaNegativa.classList.remove("active");
-    respostaPositiva.classList.add("active")
+    respostaPositiva.classList.add("active");
     calcularImc(peso, altura);
   }
 });
