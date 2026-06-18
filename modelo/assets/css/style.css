@@ -19,9 +19,17 @@ body{
     max-width: 630px;
     margin: 50px auto;
     background: #fff;
-    padding: 20px;
+    padding: 10px;
 }
-    
+ 
+.texto{
+    display: flex;
+    gap: 5rem;
+}
+.texto ul{
+    list-style: none;
+}
+
 form label,form input, form button{
     display: block;
     width: 100%;
@@ -49,4 +57,22 @@ form button{
 }
 form button:hover{
     background: var(--primary-color-dark);
+}
+
+.resposta{
+    display: none;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: rgba(0, 128, 0, 0.521);
+    height: auto;
+}
+
+#negativa{
+    background-color: red; 
+}
+
+.resposta.active{
+    display: block;
 }
