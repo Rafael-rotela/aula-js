@@ -5,39 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>exercicio</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="assets/javascript/main.js" defer></script>
   </head>
   <body>
-      <section class="container">
-        <h1>Tabela IMC</h1>
-        <div class="texto"></div>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum ipsa
-          necessitatibus omnis asperiores hic placeat facere alias vero repellat
-          est! Adipisci recusandae aut, et saepe ducimus itaque amet quasi
-          assumenda.
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum ipsa
-          necessitatibus omnis asperiores hic placeat facere alias vero repellat
-          est! Adipisci recusandae aut, et saepe ducimus itaque amet quasi
-          assumenda.
-        </p>
-
-        <form action="">
-          <label for="input-teste-1">Label teste #1</label>
-          <input type="text" id="input-teste-1" />
-    
-          <label for="input-teste-2">Label teste #2</label>
-          <input type="password" id="input-teste-2" />
-    
-          <label for="input-teste-3">Label teste #3</label>
-          <input type="email" id="input-teste-3" />
-    
-          <label for="input-teste-4">Label teste #4</label>
-          <input type="number" id="input-teste-4" />
-          <button>Enviar</button>
-        </form>
+    <section class="container">
+      <h1>Tabela IMC</h1>
+      <div class="texto">
+        <ul>
+          <h2>IMC</h2>
+          <li><p>Menos do que 18,5</p></li>
+          <li><p>Entre 18,5 e 24,9</p></li>
+          <li><p>Entre 25 e 29,9</p></li>
+          <li><p>Entre 30 e 34,9</p></li>
+          <li><p>Entre 35 e 39,9</p></li>
+          <li><p>Mais  do que 40</p></li>
+        </ul>
+        <ul>
+          <h2>Resultado</h2>
+          <li><p>Abaixo do peso</p></li>
+          <li><p>Peso normal</p></li>
+          <li><p>Sobrepeso</p></li>
+          <li><p>Obesidade grau 1</p></li>           
+          <li><p>Obesidade grau 2</p></li>           
+          <li><p>Obesidade grau 3</p></li>           
+        </ul>
+      </div>
+      
+      
+      <form action="">
+        <!-- <label for="input-teste-1">Label teste #1</label>
+        <input type="text" id="input-teste-1" />
+        
+        <label for="input-teste-2">Label teste #2</label>
+        <input type="password" id="input-teste-2" /> -->
+        
+        <label for="input-teste-3">Peso</label>
+        <input type="text" id="input-teste-3" />
+        
+        <label for="input-teste-4">Altura</label>
+        <input type="text" id="input-teste-4" />
+        <button id="btn">Enviar</button>
+      </form>
+      <div class="resposta" id="resposta"></div>
+      <div class="resposta" id="negativa">asdas</div>
     </section>
+    <script src="assets/javascript/main.js"></script>
   </body>
 </html>
