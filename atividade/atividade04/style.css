@@ -1,3 +1,4 @@
+/* Layout da página que apresenta a data atual. */
 body{
     display: flex;
     height: 100vh;

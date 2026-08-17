@@ -1,13 +1,18 @@
+// Classifica a idade usando faixas contínuas, sem deixar idades de fora.
 function calcularIdade(){
-    let idade = Number(document.getElementById('idade').value);
-    if(idade < 2){
+    const idade = Number(document.getElementById('idade').value);
+    if(idade < 0 || !Number.isFinite(idade)) {
+        document.getElementById('msg-idade').innerHTML = "Informe uma idade válida";
+    } else if(idade <= 2){
         document.getElementById('msg-idade').innerHTML = "você é um Bebê";
-    } else if(idade >= 3 && idade <= 11){
+    } else if(idade <= 11){
         document.getElementById('msg-idade').innerHTML = "você é uma Criança";
-    } else if(idade >= 12 && idade <= 21){
-        document.getElementById('msg-idade').innerHTML = "você é uma Criança";
-    } else if(idade >= 22 && idade <= 100){
-        document.getElementById('msg-idade').innerHTML = "você é uma Criança";
+    } else if(idade <= 21){
+        document.getElementById('msg-idade').innerHTML = "você é um Adolescente";
+    } else if(idade <= 59){
+        document.getElementById('msg-idade').innerHTML = "você é um Adulto";
+    } else {
+        document.getElementById('msg-idade').innerHTML = "você é um Idoso";
     }
 }
 function negativoPositivo(){
@@ -15,8 +20,10 @@ function negativoPositivo(){
     if(numero > 0){
         document.getElementById('ms-Mm').innerHTML = 'Teu número é posítivo';
     }
-    else{
+    else if (numero < 0){
         document.getElementById('ms-Mm').innerHTML = 'Teu número é negativo';
+    } else {
+        document.getElementById('ms-Mm').innerHTML = 'O número é zero';
     }
 }
 function parImpar(){
@@ -27,7 +34,8 @@ function parImpar(){
         document.getElementById('par-impar').innerHTML = 'Teu número é Impar';
     }
 }
-function Saldo(params) {
+// Saldo atual = saldo inicial - débitos + créditos.
+function Saldo() {
     let saldo = Number(document.getElementById('saldo').value);
     let debito = Number(document.getElementById('debito').value);
     let credito = Number(document.getElementById('credito').value);
@@ -44,7 +52,8 @@ function Saldo(params) {
 }
 
 function genero(){
-    let sexo = document.getElementById('genero').value;
+    // Normaliza a entrada para aceitar F/f e M/m.
+    const sexo = document.getElementById('genero').value.trim().toLowerCase();
     
     switch (sexo) {
         case 'f':
@@ -59,33 +68,31 @@ function genero(){
     }
 }
 function sorteio(){
-    let valor1 = Number(document.getElementById('valor1').value);
-    let valor2 = Number(document.getElementById('valor2').value);
-    let valor3 = Number(document.getElementById('valor3').value);
-    let lista = [];
-    lista.push(valor1,valor2,valor3);
-    lista.sort((a,b) => a - b);
-    if (valor1 == null || valor2 == null || valor2 == null) {
-        document.getElementById("msg-sorteio").innerHTML = `preencha todos os campos`;
-    } else{
-        document.getElementById("msg-sorteio").innerHTML = `seu maior valor é ${lista[2]}`;
+    const campos = ['valor1', 'valor2', 'valor3'].map(id => document.getElementById(id).value);
+    if (campos.some(valor => valor.trim() === '')) {
+        document.getElementById("msg-sorteio").innerHTML = 'Preencha todos os campos';
+        return;
     }
+    const lista = campos.map(Number);
+    lista.sort((a,b) => a - b);
+    document.getElementById("msg-sorteio").innerHTML = `Menor: ${lista[0]} — maior: ${lista[2]}`;
 }
 function reajuste(){
     let salario = Number(document.getElementById('salario').value);
     let aumento = 0;
     if(salario <= 280){
-        aumento = 1.2
+        aumento = 0.20;
     } else if (salario > 280 && salario <= 700){
-        aumento = 1.5
-    } else if (salario >= 700 && salario <= 1500){
-        aumento = 1.1
+        aumento = 0.15;
+    } else if (salario > 700 && salario <= 1500){
+        aumento = 0.10;
     } else{
-        aumento = 1.05
+        aumento = 0.05;
     }
-    let novoSalario = salario * aumento;
+    const valorAumento = salario * aumento;
+    const novoSalario = salario + valorAumento;
     document.getElementById('msg-reajuste1').innerHTML = `Seu sálario antes do reajuste é R$${salario}` 
     document.getElementById('msg-reajuste2').innerHTML = `O percentual de aumento aplicado é ${aumento * 100}%` 
-    document.getElementById('msg-reajuste3').innerHTML = `Valor do aumentado é R$${novoSalario - salario}` 
+    document.getElementById('msg-reajuste3').innerHTML = `Valor do aumento é R$${valorAumento.toFixed(2)}`
     document.getElementById('msg-reajuste4').innerHTML = `Novo salário:  R$${novoSalario}` 
 }

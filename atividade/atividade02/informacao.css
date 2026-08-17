@@ -1,3 +1,4 @@
+/* Área que apresenta o enunciado e o exercício selecionado. */
 .conteudo{
     display: flex;
     align-items: center;

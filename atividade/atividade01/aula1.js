@@ -1,15 +1,18 @@
+// Lê o nome digitado e altera o texto de um elemento da página.
 function mostrar() {
     let nome = document.getElementById("nome").value;
     document.getElementById("resposta").innerText = "Olá " + nome;
 }
 
+// Number converte o valor textual dos inputs antes da soma.
 function somar() {
     let n1 = Number(document.getElementById("num1").value);
     let n2 = Number(document.getElementById("num2").value);
     let soma = n1+n2;
-    document.getElementById("resultado").innerText = "Resultado" + soma;
+    document.getElementById("resultado").innerText = "Resultado: " + soma;
 }
 
+// Estrutura condicional que escolhe apenas um dos dois caminhos.
 function verificar(){
     let idade = Number(document.getElementById("idade").value);
 
@@ -22,8 +25,9 @@ function verificar(){
 }
 
 function parImpar() {
-    let num = document.getElementById("numero").value;
-    if(num % 2 == 0){
+    const num = Number(document.getElementById("numero").value);
+    // O resto da divisão por 2 é zero para números pares.
+    if(num % 2 === 0){
         document.getElementById("parecidade").innerHTML = num + " Teu numero é par";
     } else {
         document.getElementById("parecidade").innerHTML = num + " Teu numero é impar";
@@ -34,7 +38,7 @@ function maiorMenor() {
 
     if(num1 > 10){
         document.getElementById("msg-diferenca").innerHTML = "maior";
-    } else if(num1 >= 10){
+    } else if(num1 === 10){
         document.getElementById("msg-diferenca").innerHTML = "igual";
     }
     else{
@@ -43,6 +47,7 @@ function maiorMenor() {
 
 }
 function tecla(event) {
+    // Permite executar a verificação também pelo teclado.
     if (event.key === "Enter") {
         maiorMenor();
     }

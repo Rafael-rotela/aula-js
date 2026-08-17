@@ -1,3 +1,4 @@
+// Os enunciados ficam em um array; `data-id` indica qual posição mostrar.
 const texto = [
     "1 - Faça um algoritmo que o usuário possa digitar o seu nome e a sua idade. Utilizando a tabela a baixo, verifique em qual item se enquadra a idade da pessoa e escreva a mensagem:(nome) está com (idade) e pela tabela é considerado um (tipo)", 
     "2 - Faça um algoritmo que verifique se o número digitado é positivo ou negativo.", 
@@ -14,6 +15,7 @@ let indexChar = 0;
 const elemento = document.getElementById("text");
 
 function writeText() {
+    // Exibe um caractere por chamada para criar o efeito de digitação.
     if (indexChar <= texto[indexSentence].length) {
         elemento.textContent = texto[indexSentence].substring(0, indexChar);
         indexChar++;
@@ -25,16 +27,18 @@ function writeText() {
 const botao = document.getElementById('lista');
 
 botao.addEventListener('click', (evento) => {
+    // `closest` permite clicar tanto no item quanto em algum filho dele.
     let valor = evento.target.closest('li');
     if (valor) {
         valor = Number(valor.dataset.id);
         indexSentence = valor;
+        indexChar = 0; // Reinicia a animação ao trocar de exercício.
         console.log(valor)
         writeText();
     }
 })
 function mostrarExercicio(numero) {
- 
+  // Primeiro esconde todos os exercícios e depois revela somente o escolhido.
   document.querySelectorAll('.container-atividade').forEach(ex => ex.style.display = 'none');
  
   document.getElementById(`atividade${numero}`).style.display = 'block';

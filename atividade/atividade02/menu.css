@@ -1,3 +1,4 @@
+/* Navegação usada para escolher um exercício. */
 .menu{
     display: block;
     background-color: var( --sidebar-bg);

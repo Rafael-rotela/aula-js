@@ -1,10 +1,11 @@
-// const nome = 'Rafael'; //esta em um escopo global
+// A função mantém seus dados fora do escopo global.
 
 function meuEscopo(){
     const form = document.querySelector('.form');
     const resultado = document.querySelector('.resultado')
     const pessoas = [];
 
+    // Intercepta o envio do formulário para a página não recarregar.
     function eventoNaoEnviado(evento){
         evento.preventDefault()
         const nome = form.querySelector('.nome');
@@ -12,6 +13,7 @@ function meuEscopo(){
         const peso = form.querySelector('.peso');
         const altura = form.querySelector('.altura');
 
+        // Guarda uma nova pessoa como objeto dentro do array.
         pessoas.push({
             nome: nome.value,
             sobrenome: sobrenome.value,
@@ -20,9 +22,9 @@ function meuEscopo(){
         })    
         console.log(pessoas)
         
-        resultado.innerHTML += `<p> nome:${nome.value}  <br> sobreno: ${sobrenome.value} <br> peso: ${peso.value}</p> `
+        resultado.innerHTML += `<p>Nome: ${nome.value}<br>Sobrenome: ${sobrenome.value}<br>Peso: ${peso.value}<br>Altura: ${altura.value}</p>`;
     }
     
     form.addEventListener('submit', eventoNaoEnviado)
 }
-meuEscopo()
+meuEscopo();
