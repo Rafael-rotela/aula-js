@@ -1,14 +1,17 @@
-// const data  = new Date('2026-06-2  20:15:59');
-// console.log('Dia:', data.getDate()); 
-// console.log('Mês:', data.getFullYear()); //Mês começa do zero
-// console.log('Ano:', data.getMonth());
-// console.log('Hora:', data.getHours());
-// console.log('Min:', data.getMinutes());
-// console.log('ms:', data.getSeconds());
-// console.log('Dia semana:', data.getDay()); // 0 - Domingo, 6 sábado 
-// console.log(data.toString());
+{
+// Data fixa para observar os métodos sem depender do momento atual.
+const dataExemplo = new Date('2026-06-02T20:15:59');
+console.log('Dia:', dataExemplo.getDate());
+console.log('Mês:', dataExemplo.getMonth() + 1); // Janeiro tem índice zero.
+console.log('Ano:', dataExemplo.getFullYear());
+console.log('Hora:', dataExemplo.getHours());
+console.log('Min:', dataExemplo.getMinutes());
+console.log('Seg:', dataExemplo.getSeconds());
+console.log('Dia semana:', dataExemplo.getDay()); // 0 = domingo; 6 = sábado.
+}
 
 function FormataData(data){
+    // Cada método lê uma parte da instância de Date recebida.
     const dia = data.getDate();
     const mes = data.getMonth() + 1;
     const ano = data.getFullYear();
@@ -22,3 +25,6 @@ function FormataData(data){
 const data =  new Date();
 const dataBrasil = FormataData(data);
 console.log(dataBrasil);
+
+// Alternativa nativa para formatar data e hora no padrão brasileiro.
+console.log(data.toLocaleString('pt-BR'));

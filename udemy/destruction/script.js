@@ -1,15 +1,19 @@
-// ... rest, ... spread
-/*
+// Desestruturação retira valores de arrays ou propriedades de objetos.
+// Este bloco cria um escopo isolado para o primeiro exemplo.
+{
 const numeros = [ 10000, 22222, 30000, 40000, 5000, 6000, 7000, 8000];
 const [um, , tres, , cinco, , sete] = numeros;
 console.log(um,tres,cinco);
-*/
+}
 
 //                    0      1       2    
 //                 0 1 2   0 1 2   0 1 2
-// const numeros = [[1,2,3],[4,5,6],[7,8,9]];
-// const [, [, ,seis]] = numeros;
-// console.log(seis);
+{
+const numeros = [[1,2,3],[4,5,6],[7,8,9]];
+// As vírgulas vazias pulam posições; aqui obtemos o número 6.
+const [, [, ,seis]] = numeros;
+console.log(seis);
+}
 
 // Atribuição via desestruturação(Objetos)
 
@@ -27,7 +31,8 @@ console.log(rua,numero, endereco);
 
 
 
-// const { nome, sobrenome, idade } = pessoa;
-// console.log(nome, sobrenome);
+// Alternativa: extrai propriedades que estão no primeiro nível.
+const { nome, sobrenome, idade } = pessoa;
+console.log(nome, sobrenome, idade);
 
 
