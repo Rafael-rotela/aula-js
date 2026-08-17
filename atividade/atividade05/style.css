@@ -1,0 +1,22 @@
+/* Apresentação dos elementos criados dinamicamente. */
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(48, 92, 128);
+}
+
+.container {
+    background-color: white;
+    margin: auto;
+    min-height: 20px;
+    border-radius: 20px;
+    width: 300px;
+    padding: 40px;
+}
+
+.container span {
+    font-size: 20px;
+    font-weight: 600;
+}
