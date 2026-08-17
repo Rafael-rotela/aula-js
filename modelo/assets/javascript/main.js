@@ -1,11 +1,13 @@
+// Mantém referências aos elementos reutilizados em diferentes resultados.
 const respostaNegativa = document.getElementById("negativa");
 const respostaPositiva = document.getElementById("resposta");
 
+// Recebe números e devolve tanto o IMC quanto sua classificação.
 function calcularImc(peso, altura) {
   peso = Number(peso.value);
-  altura = parseFloat(altura.value);
+  altura = Number(altura.value);
   const rs = document.getElementById("resposta");
-  let imc = (peso / (altura * altura)).toFixed(2);
+  const imc = peso / altura ** 2;
   let resultado = "";
 
   if (imc < 18.5) {
@@ -22,22 +24,21 @@ function calcularImc(peso, altura) {
     resultado = "Obesidade grau 3";
   }
 
-  let reposta = `Seu IMC é ${imc} ${resultado}`;
-  return (rs.innerHTML = reposta);
+  const resposta = `Seu IMC é ${imc.toFixed(2)} — ${resultado}`;
+  rs.innerHTML = resposta;
 }
 
 const btn = document.getElementById("btn");
 function validador(peso, altura) {
+  // Além de exigir conteúdo, valida valores numéricos positivos.
   const pesoValor = peso.value.trim();
   const alturaValor = altura.value.trim();
-  if (!pesoValor || !alturaValor) {
-    return false;
-  } else {
-    return true;
-  }
+  return pesoValor !== "" && alturaValor !== "" &&
+    Number(pesoValor) > 0 && Number(alturaValor) > 0;
 }
 
 btn.addEventListener("click", (evento) => {
+  // Impede o envio padrão do formulário, que recarregaria a página.
   evento.preventDefault();
   const peso = document.getElementById("input-teste-3");
   const altura = document.getElementById("input-teste-4");
