@@ -1,6 +1,6 @@
-// Closures
-
-/*Uma closure (fechamento) em JavaScript é a combinação de uma função com o seu escopo léxico. Na prática, é quando uma função interna se lembra e consegue acessar as variáveis de uma função externa, mesmo depois que a função de fora já terminou de rodar.*/
+// Closure é a combinação de uma função com o escopo em que ela foi criada.
+// Por isso, a função interna continua acessando `nome` mesmo depois que
+// `retornaFuncao` termina sua execução.
 
 function retornaFuncao(nome) {
   return function () {
@@ -8,5 +8,8 @@ function retornaFuncao(nome) {
   };
 }
 
-const funcao = retornaFuncao("Rafael");
-const funcao = retornaFuncao("Luiz");
+const falaRafael = retornaFuncao("Rafael");
+const falaLuiz = retornaFuncao("Luiz");
+
+console.log(falaRafael());
+console.log(falaLuiz());

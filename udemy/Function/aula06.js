@@ -1,4 +1,4 @@
-// callback
+// Callbacks permitem definir a próxima ação após uma tarefa assíncrona.
 
 function rand(min = 1000, max = 3000) {
   const num = Math.random() * (max - min) + min;
@@ -25,11 +25,14 @@ function f3(callback) {
 }
 
 function f1CallBack(){
-    f2(f2CallBack)
+    f2(f2CallBack);
 }
 function f2CallBack(){
-    f3(f2CallBack)
+    f3(f3CallBack);
 }
 function f3CallBack(){
-    console.log('Ola mundo')
+    console.log('Olá, mundo!');
 }
+
+// Inicia a sequência: f1 -> f2 -> f3 -> mensagem final.
+f1(f1CallBack);
