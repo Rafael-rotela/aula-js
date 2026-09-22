@@ -16,14 +16,14 @@ class Carro {
         this[_velocidade] = valor;
     }
 
-    acelerar(){
-        if(this[_velocidade] >= 100) return;
-        this[_velocidade]++;
-    }
-    freiar(){
-        if(this[_velocidade] <= 0) return;
-        this[_velocidade]--;
-    }
+    // acelerar(){
+    //     if(this[_velocidade] >= 100) return;
+    //     this[_velocidade]++;
+    // }
+    // freiar(){
+    //     if(this[_velocidade] <= 0) return;
+    //     this[_velocidade]--;
+    // }
 }
 
 const c1 = new Carro("Fusca");
