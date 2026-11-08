@@ -1,0 +1,99 @@
+/* Centraliza o cartão do formulário na tela. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(48, 92, 128);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    margin: auto;
+    min-height: 100px;
+    border-radius: 20px;
+    width: 400px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+    text-align: center;
+    color: rgb(48, 92, 128);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container ul {
+    background-color: #f0f4f8;
+    border-left: 4px solid rgb(48, 92, 128);
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    list-style-position: inside;
+}
+
+.container ul li {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.container ul li:last-child {
+    margin-bottom: 0;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 12px;
+}
+
+.formulario input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formulario input:focus {
+    border-color: rgb(48, 92, 128);
+    box-shadow: 0 0 0 3px rgba(48, 92, 128, 0.15);
+}
+
+.formulario button {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: rgb(48, 92, 128);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.formulario button:hover {
+    background-color: rgb(35, 70, 100);
+}
+
+.error-text {
+    font-size: 12px;
+    color: red;
+}
